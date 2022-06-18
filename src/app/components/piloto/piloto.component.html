@@ -1,11 +1,28 @@
 <div class="container">
     
-    <div>
+    <!-- <div>
         <p>The List!</p>
         <ul>
             <li *ngFor="let user of users; let i = index" [ngClass]="user.status">
                 <p>{{i + 1 + "."}} {{user.name}}</p>  
             </li>
         </ul>
-    </div>    
+    </div>     -->
+
+    <div>
+        <h1 *ngIf="active">Directivas estructurales</h1>
+        <button type="button" (click)="active = !active">Show/Hide</button>
+        <ul>
+            <ng-container *ngFor="let user of users; let i = index">            
+                <li *ngIf="user.status == status">
+                    <h3>	    
+                        <p>{{i + 1 + "."}} {{user.name}}</p>
+                    </h3>      
+                </li>
+            </ng-container>
+            
+        </ul>
+        <button type="button" (click)="changeStatus()">Cambio de status</button>
+        {{status}}
+    </div>  
 </div>    

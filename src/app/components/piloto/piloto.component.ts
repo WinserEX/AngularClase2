@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PilotoComponent implements OnInit {
   title = 'Piloto';
   status = 'inactivo';
+  active: boolean = true;
 
   users = [
     {
@@ -39,6 +40,15 @@ export class PilotoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeStatus() {
+    if (this.status == 'activo') {
+      this.status = 'inactivo';
+    }
+    else {
+      this.status = 'activo';
+    }
   }
 
 }
