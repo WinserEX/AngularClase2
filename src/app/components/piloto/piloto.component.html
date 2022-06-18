@@ -1,0 +1,11 @@
+<div class="container">
+    
+    <div>
+        <p>The List!</p>
+        <ul>
+            <li *ngFor="let user of users; let i = index" [ngClass]="user.status">
+                <p>{{i + 1 + "."}} {{user.name}}</p>  
+            </li>
+        </ul>
+    </div>    
+</div>    

@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    font-family: montserrat;
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+.inactivo > p {
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+    width: 30%;
+}
+
+.activo > p {
+    background-color: green;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+    width: 30%;
+}
+
+
+
+
